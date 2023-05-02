@@ -1,28 +1,37 @@
+// khởi tạo class product với khung sườn thông tin của sản phẩm
 class Product {
-  constructor(photo, type, dec, price, quan) {
+  constructor(photo, type, dec, price, quantiy) {
     this.photo = photo;
     this.type = type;
     this.dec = dec;
     this.price = price;
-    this.quan = quan
+    this.quantiy = quantiy
 
   }
 }
-function chuahoanthien() {
+
+// Hàm thông báo chức năng chưa hoàn thiện của web
+function ChuaHoanThien() {
   alert("Tính năng này đang trong quá trình hoàn thiện")
 }
+
+//  trả về phần tử có thuộc tính id 'Products' gán cho biến tb
 let tb = document.getElementById('Products')
+
+// Mảng chứa tất cả thông tin của sản phẩm 
 let Products = [
-  new Product("ảnh 2.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Barcelona thun thái cao cấp", 160000, "https://belo.vn/ao-bong-da-clb-Barcelona-thun-thai-cao-cap/", 1),
-  new Product("ảnh 3.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Real Madrid thun thái cao cấp", 180000, "https://belo.vn/ao-bong-da-clb-Real-Madrid-thun-thai-cao-cap/", 1),
-  new Product("ảnh 4.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Chelsea thun thái cao cấp", 170000, "https://belo.vn/ao-bong-da-clb-Chelsea-thun-thai-cao-cap/", 1),
-  new Product("ảnh 5.jpg", "Áo đá bóng nam", "Áo bóng đá CLB PSG thun thái cao cấp", 180000, "https://belo.vn/ao-bong-da-clb-PSG-thun-thai-cao-cap/", 1),
-  new Product("ảnh 6.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Bayern Munich thun thái cao cấp", 190000, "https://belo.vn/ao-bong-da-clb-bayern-munich-thun-thai-cao-cap/", 1),
-  new Product("ảnh 7.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Manchester United thun thái cao cấp", 175000, "https://belo.vn/ao-bong-da-clb-Manchester-United-thun-thai-cao-cap/", 2),
-  new Product("/image/ảnh1.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Real Madrid sân nhà thun thái cao cấp", 180000, "https://belo.vn/ao-bong-da-doi-tuyen-bo-dao-nha-mau-xanh-la-phoi-do-moi-nhat-2020/", 1),
-  new Product("ảnh 8.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Everton thun thái cao cấp", 165000, "https://belo.vn/ao-bong-da-clb-everton-thun-thai-cao-cap-2/", 1),
-  new Product("/image/ảnh 9.jpg", "Áo đá bóng nam", "Áo bóng đá đội tuyển Bồ Đào Nha thun thái cao cấp", 180000, "https://belo.vn/ao-bong-da-doi-tuyen-bo-dao-nha-mau-xanh-la-phoi-do-moi-nhat-2020/", 1)
+  new Product("/image/img1.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Real Madrid sân nhà thun thái cao cấp", 160000, "https://belo.vn/ao-bong-da-clb-Barcelona-thun-thai-cao-cap/"),
+  new Product("/image/img2.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Barcelona thun thái cao cấp", 180000, "https://belo.vn/ao-bong-da-clb-Real-Madrid-thun-thai-cao-cap/"),
+  new Product("/image/img3.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Real Madrid thun thái cao cấp", 170000, "https://belo.vn/ao-bong-da-clb-Chelsea-thun-thai-cao-cap/"),
+  new Product("/image/img4.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Chelsea thun thái cao cấp", 180000, "https://belo.vn/ao-bong-da-clb-PSG-thun-thai-cao-cap/"),
+  new Product("/image/img5.jpg", "Áo đá bóng nam", "Áo bóng đá CLB PSG thun thái cao cấp", 190000, "https://belo.vn/ao-bong-da-clb-bayern-munich-thun-thai-cao-cap/"),
+  new Product("/image/img6.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Bayern Munich thun thái cao cấp", 175000, "https://belo.vn/ao-bong-da-clb-Manchester-United-thun-thai-cao-cap/"),
+  new Product("/image/img7.jpg", "Áo đá bóng nam", "Áo bóng đá CLB MU sân nhà thun thái cao cấp", 180000, "https://belo.vn/ao-bong-da-doi-tuyen-bo-dao-nha-mau-xanh-la-phoi-do-moi-nhat-2020/"),
+  new Product("/image/img8.jpg", "Áo đá bóng nam", "Áo bóng đá CLB Everton thun thái cao cấp", 165000, "https://belo.vn/ao-bong-da-clb-everton-thun-thai-cao-cap-2/"),
+  new Product("/image/img9.jpg", "Áo đá bóng nam", "Áo bóng đá đội tuyển Bồ Đào Nha thun thái cao cấp", 180000, "https://belo.vn/ao-bong-da-doi-tuyen-bo-dao-nha-mau-xanh-la-phoi-do-moi-nhat-2020/")
 ]
+
+// Hiển thị tất các sản phẩm trong mảng Product ra Website
 for (let i = 0; i < Products.length; i++) {
   console.log(i.photo)
   tb.innerHTML += `
@@ -36,7 +45,7 @@ for (let i = 0; i < Products.length; i++) {
                       
                   </div>
                   <div>
-                      <button  type="button" onclick="addpr(${i})">
+                      <button  type="button" onclick="AddProduct(${i})">
                           
                           <span>Thêm Vào Giỏ Hàng</span>
                       </button>
@@ -46,94 +55,93 @@ for (let i = 0; i < Products.length; i++) {
 
 }
 
+// Hàm tính tổng tiền của các sản phẩm được thêm vào giỏ hàng
 function formatCurrency(number) {
   if(number){
     return number.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
   }
-  return "";
+  return '';
   
 }
 
+// Hàm hiển thị thông tin các sản phẩm được thêm vào giỏ hàng 
 function show() {
+  let total = 0;
+  let price = 0;
   let sp = "";
   for (let i = 0; i < cart.length; i++) {
-      sp += `
-          <div class="cart">
-              <div class="cart-sp" style="display: flex;">
-                  <img src="${cart[i].photo}" alt="">
-                  <p>${cart[i].dec}</p>
-              </div>
-              <div class="cart-pr">
-                  <p style="color: red "><del style="color: black ;font-size:13px  "> ${formatCurrency(cart[i].cost)}</del>  ${formatCurrency(cart[i].price)}</p>
-          
-                  <p style="display: flex;">
-                      <button onclick="tru(${i})" style="margin-left :30px">-</button>
-                      <input type="number" readonly class="sl" value="${cart[i].quan}" width=20px>
-                      <button onclick="cong(${i})">+</button>
-                  </p>
-                  <p style="color: red  ">${formatCurrency(cart[i].price * cart[i].quan)}</p>   
-                  <p>
-                  <button onclick="buy(${i})"> Mua hàng</button>
-                  <button onclick="del(${i})">xoá</button>
-                  
-                  </p>
-                  
-              </div>
-          </div>`
+      sp+= `<tr>
+                <td>
+                  <div class='product-information'>
+                    <img src="${cart[i].photo}" alt="">
+                    <p>${cart[i].dec}</p>
+                  </div>
+                </td>
+                <td>
+                  <p style="color: red; text-align: center ">  ${formatCurrency(cart[i].cost)}  ${formatCurrency(cart[i].price)}</p>
+                </td>
+                <td>
+                  <button onclick="tru(${i})" style="margin-left :60px">-</button>
+                  <input style="width: 25px; text-align: center"  type="number"   readonly class="sl" value="${cart[i].quantiy}" >
+                  <button onclick="cong(${i})">+</button>
+                </td>
+                <td><p style="color:red; text-align: center">${formatCurrency(cart[i].price * cart[i].quantiy)}</p></td>
+                <td class="ButtonDelete">
+                  <button onclick="DeleteProduct(${i})">xoá</button>
+                </td>
+            </tr>`
 
-
+    price = cart[i].price * cart[i].quantiy
+    total += price;
   }
 
+  // Thực hiện hiển thị sản phẩm được thêm vào giỏ hàng
   document.getElementById('cart').innerHTML = sp
+
+  // Thực hiện hiển thị tổng tiền của các sản phẩm được thêm vào giỏ hàng
+  document.getElementById("price-total").innerHTML = formatCurrency(total)
 }
-let cart = [
+let cart = [];
+show();
 
-];
-
-function addpr(i) {
+// Hàm thêm sản phẩm vào giỏ hàng
+function AddProduct(i) {
   if (cart.indexOf(Products[i]) != -1) {
-      Products[i].quan += 1
+      Products[i].quantiy += 1
   } else {
-      Products[i].quan = 1
+      Products[i].quantiy = 1
       cart.push(Products[i])
   }
   console.log(cart)
   document.getElementById('cart').innerHTML = ""
   show();
- 
-  
+  showCartStatus = true;
 }
 
-function del(i) {
+//Hàm xáo sản phẩm trong giỏ hàng
+function DeleteProduct(i) {
   cart.splice(i, 1)
   document.getElementById('cart').innerHTML = ""
   show()
 }
+
+
 function tru(i) {
-  cart[i].quan -= 1;
-  if (cart[i].quan < 0) {
+  cart[i].quantiy -= 1;
+  if (cart[i].quantiy < 0) {
       if (confirm('bạn có muốn xoá sản phẩm ra khỏi giỏ hàng không') == true) {
-          del(i);
+          DeleteProduct(i);
       } else {
-          cart[i].quan = 0
+          cart[i].quantiy = 0
       }
   }
   document.getElementById('cart').innerHTML = ""
   show()
 }
+
+
 function cong(i) {
-  cart[i].quan += 1;
+  cart[i].quantiy += 1;
   document.getElementById('cart').innerHTML = ""
   show()
-}
-function buy(i) {
-  document.getElementById('dec').value = cart[i].dec
-  document.getElementById('soluong').value = cart[i].quan
-  document.getElementById('dongia').value = cart[i].price
-  document.getElementById('thanhtien').value = cart[i].quan * cart[i].price
-  document.getElementById('form-buy').style.display = "block"
-
-}
-function cancel() {
-  document.getElementById('form-buy').style.display = "none"
 }
