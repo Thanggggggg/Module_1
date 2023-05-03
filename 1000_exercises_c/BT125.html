@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Bài 125: Viết hàm đếm số lượng số nguyên tố nhỏ hơn 100 trong mảng
+        function countPrimeNumbers(arr) {
+            let count = 0;
+            for (let i = 0; i < arr.length; i++) {
+                if (isPrime(arr[i])) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        function isPrime(n) {
+            if (n < 2) {
+                return false;
+            }
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

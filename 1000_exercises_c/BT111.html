@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script> //Bài 111: Viết chương trình in ra tam giác cân có độ cao h
+        let h = prompt("Nhập độ cao của tam giác cần in: ");
+
+        for (let i = 1; i <= h; i++) {
+            for (let j = 1; j <= h - i; j++) {
+                document.write("&nbsp;");
+            }
+            for (let k = 1; k <= 2 * i - 1; k++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
+
 <body>
   <script>
-    //Bài 1: Tính S(n) = 1 + 2 + 3 + … + n</h1>
+   var n = 100;
+var largest_odd_divisor = 1;
 
-     let s = 0;
-     let n = prompt('input n');
-     
+for (var i = 1; i <= n; i += 2) {
+    if (n % i == 0) {
+        largest_odd_divisor = i;
+    }
+}
 
-    for (let i = 1; i <= n; i++) {
-        s += i;
-      }
-      document.write(s);
+console.log("The largest odd divisor of", n, "is", largest_odd_divisor);
+Kết quả của đoạn mã này sẽ là:
+
+csharp
+Copy code
+The largest odd divisor of 100 is 25
+Chúng ta có thể sử dụng các phương thức khác nhau để hiển thị kết quả dưới dạng HTML hoặc đưa vào trong các phần tử HTML trên trang web. Ví dụ, chúng ta có thể sử dụng phương thức document.write() để ghi kết quả trực tiếp vào trang web:
+
+javascript
+Copy code
+var n = 100;
+var largest_odd_divisor = 1;
+
+for (var i = 1; i <= n; i += 2) {
+    if (n % i == 0) {
+        largest_odd_divisor = i;
+    }
+}
+
+document.write("The largest odd divisor of <strong>" + n + "</strong> is <strong>" + largest_odd_divisor + "</strong>.");
+Kết quả sẽ được ghi vào trang web dưới dạng:
+
+csharp
+Copy code
+The largest odd divisor of 100 is 25.
+
+let
+
+
+Regenerate response
   </script>
 </body>
+
 </html>

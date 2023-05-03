@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Bài 132: Viết hàm liệt kê các giá trị chẵn trong mảng 1 chiều các số nguyên
+        let myArray = +prompt('Enter myArray: ');
+        let number = new Array(myArray);
+        for (let i = 0; i < number.length; i++) {
+            number[i] = Number(prompt(`Enter the value of element ${i + 1}:`));
+        }
+        let evenNumber = number[0];
+        for (let i = 1; i < number.length; i++) {
+            if (number[i] % 2 === 0) {
+                evenNumber = number[i];
+            }
+        }
+        document.write(` The even values in array is: ${evenNumber}`);
+    </script>
+</body>
+
+</html>

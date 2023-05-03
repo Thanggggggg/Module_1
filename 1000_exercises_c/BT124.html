@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Bài 124: Viết hàm kiểm tra trong mảng các số nguyên có tồn tại giá trị chẵn nhỏ hơn 2004 hay không
+        let myArray = Number(prompt('Enter myArray:'));
+        let number = new Array(myArray);
+        for (let i = 0; i < number.length; i++) {
+            number[i] = Number(prompt(`Enter the value of element ${i + 1}:`));
+        }
+        let evenNumber = []
+        for (let i = 0; i < number.length; i++) {
+            if (number[i] % 2 == 0 && number[i] < 2004) {
+            evenNumber.push(number[i]);
+            }
+        }
+        document.write(`The even number value less than 2004  in the array is: ${evenNumber}`);
+    </script>
+</body>
+</html>

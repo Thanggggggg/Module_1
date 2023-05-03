@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áo quần đá banh</title>
+    <link rel="stylesheet" href="BT3.css" >
+</head>
+<body>
+    <div class="nav-bar">
+        <div id="Logo"><img alt="" class="title">KingShop</div>
+        <div>
+            <ul>
+                <li>
+                    <a href="https://quocphap696.github.io/stussy-logIn/">Log In</a>
+                </li>
+                <li onclick="chuahoanthien()">Hotline: 1800.8198</li>
+                <li onclick="chuahoanthien()">Giỏ hàng</li>
+                <li onclick="chuahoanthien()">Đơn hàng</li>
+                <li onclick="chuahoanthien()">Liên hệ</li>
+                <li onclick="chuahoanthien()">Home</li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="div-body">
+        <div class="container">
+            <div class="infor">Thông tin sản phẩm</div>
+            <div class="form-create">
+                <div class="create-product">
+                    <div class="product-img">
+                        <input type="image" id="img-change" onchange="ChangeImaage()">
+                    </div>
+                    <div class="product-create">
+                            <div class="infromation-group"> 
+                                <input type="hidden" id="ip-id" class="ip-information" value="">
+                            </div>
+                            <div class="infromation-group">
+                                <label for="ip-name" class="lb-information">Name </label> 
+                                <input type="text" id="ip-name" class="ip-information">
+                            </div>
+                            <div class="infromation-group"> 
+                                <label for="ip-price" class="lb-information">Price </label> 
+                                <input type="text" id="ip-price" class="ip-information">
+                            </div>  
+                            <div class="infromation-group"> 
+                                <label for="ip-color" class="lb-information">Color </label> 
+                                <input type="text" id="ip-color" class="ip-information">
+                            </div>
+                            <div class="infromation-group">
+                                <label for="ip-quantity" class="lb-information">Quantity </label> 
+                                <input type="text" id="ip-quantity" class="ip-information">
+                            </div>
+                            <div class="infromation-group">
+                                <label for="ip-image" class="lb-information">Image </label> 
+                                <input type="text" id="ip-image" class="ip-information">
+                            </div>
+                    </div>
+                    <div class="action">
+                        <button onclick="addProduct()" class="bt-add" type="button">Add</button>
+                        <button onclick="saveProduct()" id="saveProduct" class="bt-save d-none" type="button">Save</button>
+                        <button onclick="cancelProduct()" id="cancelProduct" class="bt-cancel d-none" type="button">Cancel</button>
+                        <button onclick="resetProduct()" class="bt-reset" type="button">Reset</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="button-find">
+                <label class="lb-information search">Search</label>
+                <input type="text" class="ip-information" id="ip-find" placeholder="What do you want to search?">
+                <!-- <input type="radio" id="rd-name" name="find" value="name" checked>
+                <label class="lb-radio" for="rd-name">Name</label> -->
+            </div>
+            <div class="form-list">
+                <table id="tb-allproduct">
+                    <thead>
+                        <tr style="height: 50px;">
+                           <td>ID</td> 
+                           <td>Name</td> 
+                           <td>Price</td> 
+                           <td>Color</td> 
+                           <td>Quantity</td> 
+                           <td>Image</td> 
+                           <td>Action</td> 
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="page-number-box">
+                <div class="pagination-box">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="BT3.js"></script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let generateArrayAndDisplay  = [1, 2, 5, 3, 6, 5, 98, 8]
+        function generateArrayAndDisplay() {
+            let myArray = [];
+            for (let i = 0; i < 10; i++) {
+                myArray.push(Math.floor(Math.random() * 10) + 1);
+            }
+
+            // Hiển thị mảng ra màn hình
+            console.log("Mảng của bạn là:");
+            for (let i = 0; i < myArray.length; i++) {
+                console.log(myArray[i]);
+            }
+
+            // Tìm giá trị lớn nhất trong mảng
+            let maxVal = myArray[0]; // Giả sử phần tử đầu tiên là giá trị lớn nhất
+            for (let i = 1; i < myArray.length; i++) {
+                if (myArray[i] > maxVal) { // Nếu phần tử thứ i lớn hơn giá trị lớn nhất hiện tại
+                    maxVal = myArray[i]; // Cập nhật giá trị lớn nhất
+                }
+            }
+
+            // Hiển thị giá trị lớn nhất ra màn hình
+            console.log("Giá trị lớn nhất trong mảng là:", maxVal);
+        }
+
+    </script>
+</body>
+
+</html>

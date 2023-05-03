@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hiển thị 10 phần tử</title>
+</head>
+
+<body>
+  <script>
+    let column = +prompt("Nhập số cột:");
+    let row = +prompt("Nhập số hàng:");
+    let nhap = new Array();
+
+    for (let i = 0; i < column; i++) {
+      nhap[i] = new Array();
+      for (let j = 0; j < row; j++) {
+        nhap[i][j] = prompt(`Nhập giá trị cho ô [${i}, ${j}]:`);
+      }
+    }
+    console.log(nhap);
+  </script>
+</body>
+
+</html>
