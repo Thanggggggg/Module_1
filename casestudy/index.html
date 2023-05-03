@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Trang web bán áo quần đá bóng</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Bruno+Ace+SC&family=Dancing+Script:wght@400;500&family=Instrument+Serif:ital@1&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div>
+            <img style="width: 210px;  height: 150px; border-radius: 50%; margin-left: 8px; "
+                src="https://tse1.mm.bing.net/th?id=OIP.dH1up_1zCfxtY0BbkVVPxQHaHa&pid=Api&P=0">
+        </div>
+        <div class="header-search-tv">
+            <div class="search-tv">
+                <input type="search" class="ip-information" placeholder=" Nhập sản phẩm bạn cần tìm...">
+                <button onclick="ChuaHoanThien()" class="btn-search">Tìm kiếm</button>
+
+            </div>
+
+            <div class="flex-center">
+                <a>
+                    <p onclick="ChuaHoanThien()">TRANG CHỦ</p>
+                </a>
+                <a>
+                    <p onclick="ChuaHoanThien()">GIỚI THIỆU</p>
+                </a>
+                <a>
+                    <p onclick="ChuaHoanThien()">KHUYẾN MÃI</p>
+                </a>
+
+                <a>
+                    <p onclick="ChuaHoanThien()">LIÊN HỆ</p>
+                </a>
+            </div>
+    </header>
+
+    <main>
+        </div>
+        <div id="Products"></div>
+        </div>
+
+        <h1 id="cart-link">GIỎ HÀNG CỦA BẠN</h1>
+       
+        <table style="width: 100%">
+            <thead>
+                <th>
+                    Sản Phẩm
+                </th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền</th>
+                <th>Thao tác</th>
+            </thead>
+            <tbody id="cart">
+
+            </tbody>
+        </table>    
+
+        </div>
+        <div style="text-align: right;" >
+            <p style="font-weight: bold; font-size: 25px; margin-top: 30px;" type="number" name="" >Tổng tiền <span id="price-total">0</span></p>
+        </div>
+        <div class="ButtonBuy">
+            <button onclick="DaHoanThien()">Thanh Toán</button>
+        </div>
+        <script src="casestudy.js"></script>
+    </main>
+</body>
+</html>
+
