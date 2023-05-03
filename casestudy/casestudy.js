@@ -14,7 +14,9 @@ class Product {
 function ChuaHoanThien() {
   alert("Tính năng này đang trong quá trình hoàn thiện")
 }
-
+function DaHoanThien() {
+  alert("Bạn đã thanh toán thành công")
+}
 //  trả về phần tử có thuộc tính id 'Products' gán cho biến tb
 let tb = document.getElementById('Products')
 
